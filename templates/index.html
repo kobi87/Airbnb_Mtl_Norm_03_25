@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+</head>
+
+<body><center>
+<div class='bottom'> 
+ <div class="login">
+  <style>
+    body{
+   background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSCVAZmXjZ8XSN6Mijd-C9nnuKsx1mHWsHGuWErIyOl34Z8cIE5");
+   background-repeat: no-repeat;
+   background-size: 100%;
+    }
+</style> 
+	<h1>Prédiction du prix d'une chambre/Appartement à Montréal</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    <input type="text" name="Quartier" placeholder="Quartier" required="required" />
+    <input type="text" name="Type de chambre" placeholder="Type de chambre" required="required" />
+	  <input type="text" name="Disponibilité" placeholder="Disponibilité" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   <h3><center>{{ prediction_text }}<h3>
+    <style>
+      img {
+        height: 100%;
+        width: 100%;
+        align:center;
+      
+             }
+      </style>
+      
+      <body>
+      <div class='bottom'>
+      <img src="https://statics.lesinrocks.com/content/thumbs/uploads/2019/11/width-1125-height-612-quality-10/airbnb-3399753-1920.jpg">
+      </div>
+        
+</body>
+</html>
