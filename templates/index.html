@@ -26,7 +26,7 @@
 <!-- Main Input For Receiving Query to our ML -->
 <form action="{{ url_for('predict')}}"method="post">
 
-  <label for="arrondissement">Choisir un arrondissement:</label>	
+  <strong><label for="arrondissement">Choisir un arrondissement:</label>	</strong>
   <select id="Quartier" name="Quartier">
     <option value="0"> </option>
   	<option value="1"> Montréal-Nord </option>
@@ -62,7 +62,7 @@
     <option value="31"> L'Île-Bizard-Sainte-Geneviève </option>
   </select>
 
-  <label for="chambre">Choisir un type de chambre / appartement:</label>	
+  <strong><label for="chambre">Choisir un type de chambre / appartement:</label>	</strong>
   <select id="Type de chambre" name="Type de chambre">
     <option value="0"> </option>
     <option value="1">Chambre privée</option>
@@ -71,9 +71,9 @@
     <option value="4">Chambre d'hôtel</option>
   </select>	
 
-  <input type="text" name="Disponibilité" placeholder="Disponibilité" required="required" />
-  
-  <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+  <input type="text" name="Disponibilité" placeholder="Durée de la disponibilité" required="required" />
+  <strong><label for="Jours">Jours</label>	</strong>
+  <button type="submit" class="btn btn-primary btn-block btn-large"> <strong>Prédiction du prix</strong></button>
 </form>
 <br>
 <br>
