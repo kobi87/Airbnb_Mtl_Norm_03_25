@@ -23,30 +23,74 @@
 </style> 
 	<h1>Prédiction du prix d'une chambre/Appartement à Montréal</h1>
 
-     <!-- Main Input For Receiving Query to our ML -->
-    <form action="{{ url_for('predict')}}"method="post">
-    <input type="text" name="Quartier" placeholder="Quartier" required="required" />
-    <input type="text" name="Type de chambre" placeholder="Type de chambre" required="required" />
-	  <input type="text" name="Disponibilité" placeholder="Disponibilité" required="required" />
+<!-- Main Input For Receiving Query to our ML -->
+<form action="{{ url_for('predict')}}"method="post">
 
-        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-    </form>
-   <br>
-   <br>
-   <h3><center>{{ prediction_text }}<h3>
-    <style>
-      img {
-        height: 100%;
-        width: 100%;
-        align:center;
-      
-             }
-      </style>
-      
-      <body>
-      <div class='bottom'>
-      <img src="https://statics.lesinrocks.com/content/thumbs/uploads/2019/11/width-1125-height-612-quality-10/airbnb-3399753-1920.jpg">
-      </div>
-        
+  <label for="arrondissement">Choisir un arrondissement:</label>	
+  <select id="Quartier" name="Quartier">
+    <option value="0"> </option>
+  	<option value="1"> Montréal-Nord </option>
+    <option value="2"> Anjou </option>
+    <option value="3"> Rivière-des-Prairies-Pointe-aux-Trembles </option>
+    <option value="4"> Sainte-Anne-de-Bellevue </option>
+    <option value="5"> Villeray-Saint-Michel-Parc-Extension </option>
+    <option value="6"> Saint-Léonard </option>
+    <option value="7"> Ahuntsic-Cartierville </option>
+    <option value="8"> LaSalle </option>
+    <option value="9"> Mercier-Hochelaga-Maisonneuve </option>
+    <option value="10"> Pierrefonds-Roxboro </option>
+    <option value="11"> Verdun </option>
+    <option value="12"> Côte-des-Neiges-Notre-Dame-de-Grâce	 </option>
+    <option value="13"> Hampstead </option>
+    <option value="14"> Montréal-Ouest </option>
+    <option value="15"> Lachine </option>
+    <option value="16"> Rosemont-La Petite-Patrie </option>
+    <option value="17"> Dollard-des-Ormeaux </option>
+    <option value="18"> Pointe-Claire </option>
+    <option value="19"> Dorval </option>
+    <option value="20"> Beaconsfield </option>
+    <option value="21"> Saint-Laurent </option>
+    <option value="22"> Mont-Royal </option>
+    <option value="23"> Côte-Saint-Luc </option>
+    <option value="24"> Kirkland </option>
+    <option value="25"> Le Sud-Ouest </option>
+    <option value="26"> Le Plateau-Mont-Royal </option>
+    <option value="27"> Outremont </option>
+    <option value="28"> Baie-d'Urfé </option>
+    <option value="29"> Ville-Marie	 </option>
+    <option value="30"> Westmount </option>
+    <option value="31"> L'Île-Bizard-Sainte-Geneviève </option>
+  </select>
+
+  <label for="chambre">Choisir un type de chambre / appartement:</label>	
+  <select id="Type de chambre" name="Type de chambre">
+    <option value="0"> </option>
+    <option value="1">Chambre privée</option>
+    <option value="2">Appartement / Maison</option>
+    <option value="3">Chambre partagé</option>
+    <option value="4">Chambre d'hôtel</option>
+  </select>	
+
+  <input type="text" name="Disponibilité" placeholder="Disponibilité" required="required" />
+  
+  <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+</form>
+<br>
+<br>
+<h3><center>{{ prediction_text }}<h3>
+ <style>
+   img {
+     height: 100%;
+     width: 100%;
+     align:center;
+   
+          }
+   </style>
+   
+   <body>
+   <div class='bottom'>
+   <img src="https://statics.lesinrocks.com/content/thumbs/uploads/2019/11/width-1125-height-612-quality-10/airbnb-3399753-1920.jpg">
+   </div>
+     
 </body>
 </html>
