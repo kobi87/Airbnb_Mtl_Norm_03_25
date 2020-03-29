@@ -7,7 +7,6 @@
 <head>
   <meta charset="UTF-8">
   <title>ML API</title>
-  <meta name="viewport" content="width=devise-width", initial-scale=1.0>
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
@@ -15,10 +14,8 @@
   
 </head>
 
-<body><center>
-<div class='top'> 
-</div>  
- <div class="login">
+<body><center> 
+<div class="login">
   <style>
     body{
    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSCVAZmXjZ8XSN6Mijd-C9nnuKsx1mHWsHGuWErIyOl34Z8cIE5");
@@ -30,7 +27,7 @@
 </div>
 <!-- Main Input For Receiving Query to our ML -->
 <form action="{{ url_for('predict')}}"method="post">
-<div class="list" style="font-size: 25px; " >
+
   <strong><label for="arrondissement">Choisir un arrondissement:</label>	</strong>
   <select style="font-size: 22px; padding: 5px; margin-right: 1.5em;">
     <option value="0"> </option>
@@ -76,7 +73,7 @@
   </select>	
   <input type="text" name="Disponibilité" placeholder="Durée de la disponibilité" required="required" style="font-size: 20px; padding: 5px;"/>
   <strong><label for="Jours">Jours</label>	</strong>
-</div>
+
   <button type="submit" class="btn btn-primary btn-block btn-large" style="font-size: 25px;"> <strong>Prédiction du prix</strong></button>
 </form>
 <br>
