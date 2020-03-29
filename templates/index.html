@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html >
+  <div class="header">
+    <img  src="https://capcubed.com/wp-content/uploads/2018/04/Home-page-banner@4x.png" background-size: 50%;>
+  </div>
 <!--From https://codepen.io/frytyler/pen/EGdtg-->
 <head>
   <meta charset="UTF-8">
   <title>ML API</title>
+  <meta name="viewport" content="width=devise-width", initial-scale=1.0>
+  <link rel='stylesheet' href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
   
 </head>
 
 <body><center>
-<div class='bottom'> 
+<div class='top'> 
+</div>  
  <div class="login">
   <style>
     body{
@@ -22,12 +28,12 @@
     }
 </style> 
 	<h1>Prédiction du prix d'une chambre/Appartement à Montréal</h1>
-
+</div>
 <!-- Main Input For Receiving Query to our ML -->
 <form action="{{ url_for('predict')}}"method="post">
-
+<div class="list" style="font-size: 25px; " >
   <strong><label for="arrondissement">Choisir un arrondissement:</label>	</strong>
-  <select id="Quartier" name="Quartier">
+  <select style="font-size: 22px; padding: 5px; margin-right: 1.5em;">
     <option value="0"> </option>
   	<option value="1"> Montréal-Nord </option>
     <option value="2"> Anjou </option>
@@ -61,33 +67,34 @@
     <option value="30"> Westmount </option>
     <option value="31"> L'Île-Bizard-Sainte-Geneviève </option>
   </select>
-
   <strong><label for="chambre">Choisir un type de chambre / appartement:</label>	</strong>
-  <select id="Type de chambre" name="Type de chambre">
+  <select style="font-size: 22px; padding: 5px; margin-right: 1.5em;">
     <option value="0"> </option>
     <option value="1">Chambre privée</option>
     <option value="2">Appartement / Maison</option>
     <option value="3">Chambre partagé</option>
     <option value="4">Chambre d'hôtel</option>
   </select>	
-
-  <input type="text" name="Disponibilité" placeholder="Durée de la disponibilité" required="required" />
+  <input type="text" name="Disponibilité" placeholder="Durée de la disponibilité" required="required" style="font-size: 20px; padding: 5px;"/>
   <strong><label for="Jours">Jours</label>	</strong>
-  <button type="submit" class="btn btn-primary btn-block btn-large"> <strong>Prédiction du prix</strong></button>
+</div>
+<div class='predict'> 
+  <button href="#" type="submit" class="btn btn-primary btn-block btn-large" style="font-size: 25px;"> <strong>Prédiction du prix</strong></button>
+</div>
 </form>
 <br>
 <br>
+
 <h3><center>{{ prediction_text }}<h3>
  <style>
    img {
      height: 100%;
      width: 100%;
-     align:center;
-   
+     align:center;   
           }
    </style>
    
-   <body>
+   <body>   
    <div class='bottom'>
    <img src="https://statics.lesinrocks.com/content/thumbs/uploads/2019/11/width-1125-height-612-quality-10/airbnb-3399753-1920.jpg">
    </div>
