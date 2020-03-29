@@ -8,14 +8,88 @@
   <meta charset="UTF-8">
   <title>ML API</title>
   <meta name="viewport" content="width=devise-width", initial-scale=1.0>
-  <link rel='stylesheet' href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
-</head>
 
+<!--the container must be positioned relative:-->
+<style>  
+*{
+    margin: 0;
+    padding: 0;
+}
+.header {
+    padding: 30px 30px 30px;
+    width: 100%;
+    height: 350px;
+    Background-position: center center;
+    font-size: 50px;
+    font-family: Arial;    
+}
+
+.bottom{
+    width: 100%;
+    height: 700px;
+    Background-position: center center;    
+}
+
+.login h1{
+    padding: 10px 10px 10px;
+    width: 100%;
+    height: 70px;
+    Background-position: center center;
+    font-size: 40px;
+    font-family: Arial;    
+}
+
+.list {
+    font-size: 20px;
+    font-family: Arial;    
+}
+
+.predict {   
+    padding: 30px 30px 30px;
+    font-size: 40px;
+    font-family: Arial;    
+}
+
+.list select {
+    background-color: rgb(148, 195, 241);
+  }
+
+.predict button {
+    background-color: #008CBA; /* Green */
+    border: 2px solid rgb(33, 39, 34);
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .predict button {
+    transition-duration: 0.4s;
+  }
+  
+  .predict button:hover {
+    background-color: rgb(103, 114, 103); /* Green */
+    color: white;
+  }
+
+  .predict button  {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  .disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+</style> 
+</head>
+<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
 <body><center>
 <div class='top'> 
 </div>  
